@@ -1,0 +1,826 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global Printing Services & Acrylic Products</title>
+    <meta name="description" content="Premium Custom Printing, Laser Cutting, and Acrylic Products.">
+
+
+
+    <!-- 1. FACEBOOK / WHATSAPP OPEN GRAPH TAGS -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Global Printing Services & Acrylic Products" />
+    <meta property="og:description" content="Premium Custom Printing, Laser Cutting, and Acrylic Products." />
+
+
+
+    
+	<!-- 2. CHANGE THE TWO LINKS BELOW TO YOUR ACTUAL WEBSITE LINK -->
+    <meta property="og:url" content="https://www.yourwebsite.com/" />
+    <meta property="og:image" content="/assets/main-banner/1.jpeg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="370" />
+
+
+
+
+    <!-- . TWITTER / X CARD TAGS -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Global Printing Services & Acrylic Products" />
+    <meta name="twitter:description" content="Premium Custom Printing, Laser Cutting, and Acrylic Products." />
+    <meta name="twitter:image" content="https://www.yourwebsite.com/assets/products/1.jpeg" />
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            /* Professional Global Color Palette */
+            --brand-primary: #10487c; /* Dark blue */
+            --brand-hover: #2b2db0; /* Dark Blue for interactions */
+            --accent-gold: #d69e2e; /* Premium Gold for promotions */
+            --bg-light: #fcfcf8; /* Clean cool gray background */
+            --text-main: #2d3748;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--bg-light);
+            overflow-x: hidden;
+            color: var(--text-main);
+        }
+
+        /* Top Bar */
+        .top-bar {
+            background: #020b3b; /* Darker navy for top bar */
+            color: #e2e8f0;
+            padding: 10px 0;
+            font-size: 13px;
+            letter-spacing: 0.5px;
+        }
+
+        /* Navbar */
+        .brand-bg {
+            background: var(--brand-primary);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .logo-box {
+            width: 48px;
+            height: 48px;
+            border-radius: 10px;
+            background: linear-gradient(135deg, #ffffff, #e2e8f0);
+            color: var(--brand-primary);
+            font-weight: 800;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3rem;
+            box-shadow: inset 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        /* Sleek Marquee (Promotional) */
+        .marquee-wrapper {
+            background: var(--accent-gold);
+            color: #1a202c;
+            padding: 12px 0;
+            font-weight: 700;
+            font-size: 14px;
+            overflow: hidden;
+            white-space: nowrap;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .marquee-wrapper p {
+            display: inline-block;
+            padding-left: 100%;
+            margin: 0;
+            animation: scroll 25s linear infinite;
+        }
+        @keyframes scroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-100%); }
+        }
+
+        /* Banners */
+        .banner-img {
+            height: 420px;
+            object-fit: cover;
+            border-radius: 0 0 20px 20px;
+        }
+
+        @media (max-width: 768px) {
+            .banner-img { height: 220px; border-radius: 0; }
+            .social-mobile { flex-direction: row; gap: 15px; justify-content: center; margin-top: 15px; }
+        }
+
+        /* Product Cards */
+        .product-card {
+            border: 1px solid rgba(0,0,0,0.05);
+            border-radius: 16px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            background: #ffffff;
+            overflow: hidden;
+            position: relative;
+        }
+        .product-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+            border-color: var(--brand-primary);
+        }
+        .product-card img {
+            height: 240px;
+            object-fit: cover;
+            width: 100%;
+            background: #fff;
+            padding: 15px;
+        }
+        
+        /* Promotional Badge */
+        .promo-badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: var(--accent-gold);
+            color: #1a202c;
+            padding: 5px 12px;
+            font-size: 0.75rem;
+            font-weight: 800;
+            border-radius: 20px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            z-index: 2;
+            text-transform: uppercase;
+        }
+
+        .price-tag {
+            font-size: 1.35rem;
+            color: var(--brand-primary);
+            font-weight: 800;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            background: #fff;
+            padding: 25px;
+            border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.04);
+            position: sticky;
+            top: 100px;
+        }
+        .sidebar a {
+            color: #4a5568;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            padding: 10px 0;
+            border-bottom: 1px solid #edf2f7;
+            transition: 0.2s;
+            font-weight: 500;
+        }
+        .sidebar a i { margin-right: 10px; color: var(--brand-primary); }
+        .sidebar a:hover {
+            color: var(--brand-primary);
+            padding-left: 8px;
+            border-bottom-color: var(--brand-primary);
+        }
+
+        /* Buttons */
+        .btn-brand {
+            background: var(--brand-primary);
+            color: #fff;
+            font-weight: 600;
+            border: none;
+            border-radius: 8px;
+            padding: 10px;
+            transition: background 0.3s;
+        }
+        .btn-brand:hover {
+            background: var(--brand-hover);
+            color: #fff;
+        }
+
+        /* Category Chips */
+        .category-chip {
+            background: #fff;
+            padding: 15px 10px;
+            border-radius: 12px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.04);
+            text-align: center;
+            font-weight: 600;
+            font-size: 14px;
+            border: 2px solid transparent;
+            transition: 0.3s;
+            cursor: pointer;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #4a5568;
+        }
+        .category-chip:hover {
+            border-color: var(--brand-primary);
+            color: var(--brand-primary);
+            transform: translateY(-3px);
+        }
+
+        /* Decorative Modal Thumbnails */
+        .thumb-wrapper {
+            position: relative;
+            padding: 4px;
+            border: 2px solid #e2e8f0;
+            border-radius: 10px;
+            background: #fff;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .thumb-wrapper:hover, .thumb-wrapper.active {
+            border-color: var(--brand-primary);
+            box-shadow: 0 4px 10px rgba(26, 54, 93, 0.15);
+            transform: translateY(-2px);
+        }
+        .thumb-img {
+            height: 75px;
+            width: 100%;
+            object-fit: cover;
+            border-radius: 6px;
+        }
+        .thumb-icon {
+            position: absolute;
+            bottom: -8px;
+            right: -8px;
+            background: var(--brand-primary);
+            color: #fff;
+            border-radius: 50%;
+            width: 22px;
+            height: 22px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 10px;
+            opacity: 0;
+            transition: 0.3s;
+        }
+        .thumb-wrapper:hover .thumb-icon { opacity: 1; }
+    </style>
+</head>
+
+
+
+
+<body>
+
+
+
+    <div class="top-bar">
+        <div class="container d-flex justify-content-between align-items-center flex-wrap">
+            <div><i class="bi bi-globe-americas"></i> Shipping Premium Products Nationwide & Worldwide</div>
+            <a href="contact.html" class="text-white text-decoration-none fw-medium"><i class="bi bi-headset"></i> 24/7 Support: Contact Us</a>
+        </div>
+    </div>
+
+    <nav class="navbar navbar-expand-lg navbar-dark brand-bg sticky-top" >
+	
+        <div class="container">
+		<!-- GLobal Priting & Laser Hub Logo -->
+            <a class="navbar-brand d-flex align-items-center gap-3" href="#">
+                <div class="logo-box">GPL</div>
+                <div class="lh-sm">
+                    <div class="fw-bold fs-4">Global Printing & Laser Hub</div>
+                    <small style="font-size: 0.8rem; opacity: 0.9;"> Find your products here </small>
+                </div>
+            </a>
+
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+			<!-- youtube,facebook,tiktok,about us -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+               
+			    <ul class="navbar-nav ms-auto social-mobile align-items-center">
+                    <li class="nav-item"><a class="nav-link text-white" href="https://www.youtube.com/@gprinting9688" target="_blank" title="YouTube"><i class="bi bi-youtube fs-4"></i></a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="https://www.facebook.com/people/Global-Printing-Services-Khudu-Khel-Buner/61566971782024/?rdid=qG1kmkgjHKi8Q8MQ&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1EVXRexQuJ%2F" title="Facebook"><i class="bi bi-facebook fs-4"></i></a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="https://www.tiktok.com/@muradali29998" title="TikTok"><i class="bi bi-tiktok fs-4"></i></a></li>
+                    <li class="nav-item"><a class="btn btn-outline-light btn-sm ms-lg-3 fw-bold rounded-pill px-3" href="#about">About Us</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+	<!-- Marquee -->	
+<div class="marquee-wrapper shadow-sm">
+    <p>
+        🔥 FLASH SALE:  Flat 10% OFF on Bulk Orders on 21-jun-2026 ! &nbsp; • &nbsp;
+        📦 Standard Laser cutting at your door step  &nbsp; • &nbsp;
+        ⭐ Ranked #1 in Laser Cutting Quality &nbsp; • &nbsp;
+        💬 Call us on WhatsApp for Custom Designs!
+    </p>
+</div>
+
+<style>
+.marquee-wrapper{
+    overflow:hidden;
+    white-space:nowrap;
+    width:100%;
+    background:rgb(241, 200, 13);
+    padding:10px 0;
+}
+
+.marquee-wrapper p{
+    display:inline-block;
+    padding-left:100%;
+    animation: marquee 27s linear infinite;
+}
+
+/* Stop on mouse hover */
+.marquee-wrapper:hover p{
+    animation-play-state: paused;
+}
+
+/* Stop on finger touch (mobile) */
+.marquee-wrapper:active p{
+    animation-play-state: paused;
+}
+
+@keyframes marquee{
+    from{
+        transform:translateX(0);
+    }
+    to{
+        transform:translateX(-100%);
+    }
+}
+</style>
+
+
+	
+<!-- Main Slider banner -->
+  <div class="container-fluid p-0 p-md-3">
+    <div id="mainSlider"
+         class="carousel slide shadow rounded mx-auto"
+         style="max-width:1400px;width:100%;overflow:hidden;"
+         data-bs-ride="carousel"
+         data-bs-interval="3000"
+         data-bs-pause="hover">
+
+        <!-- Indicators -->
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#mainSlider" data-bs-slide-to="0" class="active"></button>
+            <button type="button" data-bs-target="#mainSlider" data-bs-slide-to="1"></button>
+            <button type="button" data-bs-target="#mainSlider" data-bs-slide-to="2"></button>
+            <button type="button" data-bs-target="#mainSlider" data-bs-slide-to="3"></button>
+            <button type="button" data-bs-target="#mainSlider" data-bs-slide-to="4"></button>
+        </div>
+
+        <!-- Slides Banners-->
+        <div class="carousel-inner rounded">
+
+            <div class="carousel-item active">
+                <img src="assets/main-banner/1.jpeg"
+                     onerror="this.src='https://placehold.co/1400x420?text=Banner+1'"
+                     class="d-block w-100 banner-img"
+                     alt="Banner 1">
+            </div>
+
+            <div class="carousel-item">
+                <img src="assets/main-banner/2.jpeg"
+                     onerror="this.src='https://placehold.co/1400x420?text=Banner+2'"
+                     class="d-block w-100 banner-img"
+                     alt="Banner 2">
+            </div>
+
+            <div class="carousel-item">
+                <img src="assets/main-banner/3.jpeg"
+                     onerror="this.src='https://placehold.co/1400x420?text=Banner+3'"
+                     class="d-block w-100 banner-img"
+                     alt="Banner 3">
+            </div>
+
+            <div class="carousel-item">
+                <img src="assets/main-banner/4.jpeg"
+                     onerror="this.src='https://placehold.co/1400x420?text=Banner+4'"
+                     class="d-block w-100 banner-img"
+                     alt="Banner 4">
+            </div>
+
+            <div class="carousel-item">
+                <img src="assets/main-banner/5.jpeg"
+                     onerror="this.src='https://placehold.co/1400x420?text=Banner+5'"
+                     class="d-block w-100 banner-img"
+                     alt="Banner 5">
+            </div>
+
+        </div>
+
+        <!-- Previous -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#mainSlider" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+
+        <!-- Next -->
+        <button class="carousel-control-next" type="button" data-bs-target="#mainSlider" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </button>
+
+    </div>
+</div>
+
+
+
+
+    <div class="container mt-5 mb-5">
+        <div class="row g-4">
+		
+		<!-- Board Results -->
+            <div class="col-12 col-lg-3 order-2 order-lg-1">
+                <div class="sidebar">
+                    <h5 class="fw-bold mb-4 text-dark"><i class="bi bi-mortarboard-fill text-primary"></i> Results</h5>
+                    <ul class="list-unstyled mb-0">
+                        <li><a href="https://www.bisess.edu.pk/site/home/results-section" target="_blank"><i class="bi bi-arrow-right-short"></i> BISE Swat</a></li>
+                        <li><a href="https://result.bisemdn.edu.pk/" target="_blank"><i class="bi bi-arrow-right-short"></i> BISE Mardan</a></li>
+                        <li><a href="https://www.bisep.edu.pk/" target="_blank"><i class="bi bi-arrow-right-short"></i> BISE Peshawar</a></li>
+                        <li><a href="https://www.btede.edu.pk/" target="_blank"><i class="bi bi-arrow-right-short"></i> BTE Peshawar</a></li>
+
+						
+                    </ul>
+                    
+                    <div class="mt-5 p-4 bg-light rounded text-center border">
+                        <i class="bi bi-shield-check fs-1 text-success mb-2"></i>
+                        <h6 class="fw-bold">100% Secure Checkout</h6>
+                        <p class="small text-muted mb-0">Order directly via verified WhatsApp business account.</p>
+                    </div>
+                </div>
+            </div>
+			
+			
+			
+		<!-- Category Chips below main banner -->
+            <div class="col-12 col-lg-9 order-1 order-lg-2">
+                
+                <div class="row g-3 mb-5">
+                    <div class="col-6 col-md-4 col-lg-2"><div class="category-chip">Number Plates</div></div>
+                    <div class="col-6 col-md-4 col-lg-2"><div class="category-chip">Name Plates</div></div>
+                    <div class="col-6 col-md-4 col-lg-2"><div class="category-chip">LED Number plates</div></div>
+                    <div class="col-6 col-md-4 col-lg-2"><div class="category-chip">Roll-up Stands</div></div>
+                    <div class="col-6 col-md-4 col-lg-2"><div class="category-chip">Custom Trophies</div></div>
+                    <div class="col-6 col-md-4 col-lg-2"><div class="category-chip">Mug Printing</div></div>
+                </div>
+
+                <div class="d-flex justify-content-between align-items-center mb-4">
+                    <h3 class="fw-bold m-0">Featured Products</h3>
+                    <span class="badge bg-primary rounded-pill py-2 px-3">Global Quality</span>
+                </div>
+
+                <div class="row g-4" id="productGrid"></div>
+            </div>
+
+        </div>
+    </div>
+	
+<!-- Map Direction   -->
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial, sans-serif;
+    background:#f5f5f5;
+}
+
+.location-section{
+    max-width:1000px;
+    margin:50px auto;
+    padding:20px;
+    text-align:center;
+}
+
+.location-section h2{
+    margin-bottom:20px;
+    color:#333;
+}
+
+.map-container{
+    overflow:hidden;
+    border-radius:12px;
+    box-shadow:0 4px 15px rgba(0,0,0,0.15);
+}
+
+.map-container iframe{
+    width:100%;
+    height:450px;
+    border:0;
+}
+
+.directions-btn{
+    display:inline-block;
+    margin-top:20px;
+    padding:14px 30px;
+    background:#4285F4;
+    color:#fff;
+    text-decoration:none;
+    font-size:18px;
+    font-weight:600;
+    border-radius:8px;
+    transition:0.3s;
+}
+
+.directions-btn:hover{
+    background:#3367D6;
+    transform:translateY(-2px);
+}
+</style>
+</head>
+<body>
+
+<section class="location-section">
+    <h2>Find Us  Global Printing & Laser Hub </h2>
+
+    <div class="map-container">  
+        <iframe
+            src="https://maps.google.com/maps?q= 34.190305,72.505554 &z=15&output=embed"
+            allowfullscreen=""
+            loading="lazy">
+        </iframe>
+    </div>
+
+    <a
+        href="https://www.google.com/maps/dir/?api=1&destination=33.6844,73.0479"
+        target="_blank"
+        class="directions-btn">
+        📍 Get Directions
+    </a>
+</section>
+
+
+	
+<!-- About Global Printing Service  -->
+    <section id="about" class="container mt-5 pt-5">
+        <div class="bg-white rounded-4 p-5 shadow-sm text-center border border-light">
+            <div class="d-inline-flex align-items-center justify-content-center bg-light text-primary rounded-circle mb-4" style="width:80px; height:80px;">
+                <i class="bi bi-award-fill fs-1"></i>
+            </div>
+            <h2 class="fw-bold mb-3 text-dark">About Global Printing & Laser Hub</h2>
+            <p class="text-muted mx-auto fs-5" style="max-width: 800px; line-height: 1.8;">
+                Based in Swabi, Khyber Pakhtunkhwa, we are an industry leader providing premium quality printing and high-precision acrylic laser cutting services. We serve clients locally and internationally, ensuring state-of-the-art finishes, guaranteed satisfaction, and rapid turnaround times.
+            </p>
+        </div>
+    </section>
+	
+	
+	
+	
+<!-- Footer- Global Printing/  CEO/Owner  /Powered By -->
+    <footer class="mt-5 border-top py-5 bg-white">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-12 col-md-4">
+                    <a class="navbar-brand d-flex align-items-center gap-2 mb-4" href="#">
+                        <div class="logo-box" style="width:40px;height:40px;font-size:1rem;">GPL</div>
+                        <div class="fw-bold fs-5 text-dark">Global Printing & Laser Hub</div>
+                    </a>
+                    <p class="text-muted">Setting the global standard for custom printing  & acrylic products. Your vision, crafted with absolute precision.</p>
+                </div>
+                <div class="col-12 col-md-4">
+                    <h5 class="fw-bold mb-4 text-dark">Our Services</h5>
+                    <ul class="list-unstyled text-muted">
+                        <li class="mb-2"><i class="bi bi-check2 text-primary me-2"></i> Mug Printing</li>
+                        <li class="mb-2"><i class="bi bi-check2 text-primary me-2"></i> Number Plates </li>
+                        <li class="mb-2"><i class="bi bi-check2 text-primary me-2"></i> 3D LED Signage</li>
+                        <li class="mb-2"><i class="bi bi-check2 text-primary me-2"></i> 3D Number Plates </li>
+                        <li class="mb-2"><i class="bi bi-check2 text-primary me-2"></i> Sublimation Printing </li>
+                        <li class="mb-2"><i class="bi bi-check2 text-primary me-2"></i> Employee Awards </li>
+                    </ul>
+                </div>
+                <div class="col-12 col-md-4">
+                    <h5 class="fw-bold mb-4 text-dark">Contact Leadership</h5>
+                    <ul class="list-unstyled text-muted">
+                        <li class="mb-3">
+                            <span class="d-block fw-bold text-dark">CEO / Owner: MUHAMMAD ALI</span>
+                            <a href="https://wa.me/923139781520" class="text-decoration-none text-success"><i class="bi bi-whatsapp"></i> +92 313 9781520</a>
+                        </li>
+                        <li class="mb-3">
+                            <span class="d-block fw-bold text-dark">Managing Director: MURAD ALI</span>
+                            <a href="https://wa.me/923438236208" class="text-decoration-none text-success"><i class="bi bi-whatsapp"></i> +92 343 8236208</a>
+                        </li>
+                        <li><i class="bi bi-envelope-at me-2"></i> gbl.2star@gmail.com</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="text-center mt-5">
+                <h6 class="text-muted text-uppercase fw-bold mb-3" style="font-size: 12px; letter-spacing: 1px;">Global Visitors</h6>
+                <a href="https://www.hitwebcounter.com" target="_blank">
+                    <img src="https://hitwebcounter.com/counter/counter.php?page=21434718&style=0001&nbdigits=5&type=page&initCount=0" alt="counter" class="rounded shadow-sm">
+                </a>
+            </div>
+
+            <div class="text-center text-muted small mt-5 pt-4 border-top">
+                Powered by Muhammad Ali SST-IT. All rights reserved &copy; 2026.
+            </div>
+        </div>
+    </footer>
+	
+	
+	<!-- F  -->
+
+    <div class="modal fade" id="productModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-xl">
+            <div class="modal-content border-0 shadow-lg" style="border-radius: 16px; overflow: hidden;">
+                <div class="modal-header border-0 bg-light p-4">
+                    <h4 class="modal-title fw-bold text-dark" id="modalTitle"></h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-4 p-md-5">
+                    <div class="row g-5">
+                        <div class="col-12 col-lg-7">
+                            <div class="position-relative mb-4 bg-light rounded-4 border p-2 text-center" style="height:450px; display:flex; align-items:center; justify-content:center;">
+                                <img id="modalMainImg" class="img-fluid rounded" style="max-height:100%; max-width:100%; object-fit:contain;" onerror="this.src='https://placehold.co/800x600/f8fafc/a0aec0?text=Product+Image'">
+                            </div>
+                            
+                            <div class="d-flex justify-content-center gap-3" id="modalThumbs"></div>
+                        </div>
+                        
+                        <div class="col-12 col-lg-5 d-flex flex-column">
+                            <span class="badge bg-success mb-2 align-self-start py-2 px-3 rounded-pill"><i class="bi bi-check-circle-fill"></i> In Stock & Ready to Ship</span>
+                            <h1 class="price-tag mb-4 fs-1" id="modalPrice"></h1>
+                            
+                            <h5 class="fw-bold mb-3">Product Description</h5>
+                            <p class="text-muted mb-4" style="line-height: 1.7;">
+                                Manufactured using premium grade acrylics and high-end laser technology. Our plates ensure longevity, weather resistance, and a highly professional finish. 
+                                <br><br>
+                                <strong>Customization:</strong> Text, fonts, colors, and sizing can all be fully customized to your specific requirements.
+                            </p>
+                            
+                            <hr class="my-4">
+                            
+                            <div class="mt-auto bg-light p-4 rounded-4 border">
+                                <h6 class="fw-bold mb-3">Ready to purchase?</h6>
+                                <a id="modalOrderBtn" class="btn btn-success w-100 py-3 fw-bold fs-5 shadow-sm rounded-3 d-flex align-items-center justify-content-center gap-2" target="_blank">
+                                    <i class="bi bi-whatsapp fs-4"></i> Place Order via WhatsApp
+                                </a>
+                                <p class="text-center text-muted small mt-3 mb-0"><i class="bi bi-clock-history"></i> Our team usually responds within 15 minutes.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const WHATSAPP_NUMBER = '923438236208';
+        
+        // Helper function for placeholders for consistent 3-view display
+        const getPlaceholder = (view) => `https://placehold.co/400x300/e2e8f0/4a5568?text=${encodeURIComponent(view)}`;
+		
+		
+		
+
+        // Updated Products Array: Added promotional tags and ensured ALL products have 3 image views.
+		
+		//Image updataion
+        const PRODUCTS = [
+            { id: 1, title: 'Number Plate – S-1',         price: 300, old: 350, promo: 'Sale', img: 'assets/products/pro1/1.jpeg', imgs: ['assets/products/pro1/2.jpeg','assets/products/pro1/3.jpeg','assets/products/pro1/4.jpeg'] },
+            { id: 2, title: 'Acrylic Number Plate – S-2', price: 500, old: 550, promo: 'Bestseller', img: 'assets/products/pro2/1.jpeg', imgs: ['assets/products/pro2/2.jpeg','assets/products/pro2/3.jpeg','assets/products/pro2/4.jpeg'] },
+            { id: 3, title: 'Acrylic Number Plate – S-3', price: 550, old: 600, img: 'assets/products/pro3/1.jpeg', imgs: ['assets/products/pro3/2.jpeg','assets/products/pro3/3.jpeg','assets/products/pro3/4.jpeg'] },
+            
+			{ id: 4, title: 'Acrylic Number Plate – S-4', price: 750, old: 800, img: 'assets/products/pro4/1.jpeg', imgs: ['assets/products/pro4/2.jpeg','assets/products/pro4/3.jpeg','assets/products/pro4/4.jpeg'] },
+			{ id: 5, title: 'Number Plate – S-1',         price: 300, old: 350, promo: 'Sale', img: 'assets/products/pro1/1.jpeg', imgs: ['assets/products/pro1/2.jpeg','assets/products/pro1/3.jpeg','assets/products/pro1/4.jpeg'] },
+			{ id: 6, title: 'Acrylic Number Plate – S-5', price: 700, old: 750, promo: 'New', img: 'assets/products/pro6/1.jpeg', imgs: ['assets/products/pro6/2.jpeg','assets/products/pro6/3.jpeg','assets/products/pro6/4.jpeg'] },
+			
+			{ id: 7, title: 'Acrylic Number Plate – S-5', price: 600, old: 600, promo: 'New', img: 'assets/products/pro7/1.jpeg', imgs: ['assets/products/pro7/2.jpeg','assets/products/pro7/3.jpeg','assets/products/pro7/4.jpeg'] },
+			{ id: 8, title: 'Acrylic Number Plate – S-5', price: 650, old: 700, promo: 'New', img: 'assets/products/pro8/1.jpeg', imgs: ['assets/products/pro8/2.jpeg','assets/products/pro8/3.jpeg','assets/products/pro8/4.jpeg'] },
+			{ id: 9, title: 'Acrylic Number Plate – S-5', price: 500, old: 550, promo: 'New', img: 'assets/products/pro9/1.jpeg', imgs: ['assets/products/pro9/2.jpeg','assets/products/pro9/3.jpeg','assets/products/pro9/4.jpeg'] },
+			
+			{ id: 10, title: 'Acrylic Number Plate – S-5', price: 500, old: 550, promo: 'New', img: 'assets/products/pro10/1.jpeg', imgs: ['assets/products/pro10/2.jpeg','assets/products/pro10/3.jpeg','assets/products/pro10/4.jpeg'] },
+			{ id: 11, title: 'Acrylic Number Plate – S-5', price: 500, old: 550, promo: 'New', img: 'assets/products/pro11/1.jpeg', imgs: ['assets/products/pro11/2.jpeg','assets/products/pro11/3.jpeg','assets/products/pro11/4.jpeg'] },
+			{ id: 12, title: 'Acrylic Number Plate – S-5', price: 300, old: 450, promo: 'New', img: 'assets/products/pro12/1.jpeg', imgs: ['assets/products/pro12/2.jpeg','assets/products/pro12/3.jpeg','assets/products/pro12/4.jpeg'] },
+
+            { id: 10, title: 'Acrylic Number Plate – S-5', price: 500, old: 550, promo: 'New', img: 'assets/products/pro13/1.jpeg', imgs: ['assets/products/pro10/2.jpeg','assets/products/pro10/3.jpeg','assets/products/pro10/4.jpeg'] },
+			{ id: 11, title: 'Acrylic Number Plate – S-5', price: 500, old: 550, promo: 'New', img: 'assets/products/pro14/1.jpeg', imgs: ['assets/products/pro11/2.jpeg','assets/products/pro11/3.jpeg','assets/products/pro11/4.jpeg'] },
+			{ id: 12, title: 'Acrylic Number Plate – S-5', price: 300, old: 450, promo: 'New', img: 'assets/products/pro15/1.jpeg', imgs: ['assets/products/pro12/2.jpeg','assets/products/pro12/3.jpeg','assets/products/pro12/4.jpeg'] },
+
+            { id: 10, title: 'Acrylic Number Plate – S-5', price: 500, old: 550, promo: 'New', img: 'assets/products/pro16/1.jpeg', imgs: ['assets/products/pro10/2.jpeg','assets/products/pro10/3.jpeg','assets/products/pro10/4.jpeg'] },
+			{ id: 11, title: 'Acrylic Number Plate – S-5', price: 500, old: 550, promo: 'New', img: 'assets/products/pro17/1.jpeg', imgs: ['assets/products/pro11/2.jpeg','assets/products/pro11/3.jpeg','assets/products/pro11/4.jpeg'] },
+			{ id: 12, title: 'Acrylic Number Plate – S-5', price: 300, old: 450, promo: 'New', img: 'assets/products/pro18/1.jpeg', imgs: ['assets/products/pro12/2.jpeg','assets/products/pro12/3.jpeg','assets/products/pro12/4.jpeg'] },
+
+			
+        ];
+
+        function fmt(n) {
+            return 'Rs ' + n.toLocaleString('en-PK');
+        }
+
+        function renderProducts(list) {
+            const grid = document.getElementById('productGrid');
+            grid.innerHTML = '';
+
+            if(list.length === 0) {
+                grid.innerHTML = '<div class="col-12 text-center text-muted py-5"><i class="bi bi-search fs-1"></i><br>No products found matching your search.</div>';
+                return;
+            }
+
+            list.forEach(p => {
+                const div = document.createElement('div');
+                div.className = 'col-12 col-sm-6 col-md-6 col-lg-4 col-xl-4';
+                
+                let badgeHtml = p.promo ? `<span class="promo-badge">${p.promo}</span>` : '';
+
+                div.innerHTML = `
+                    <div class="card h-100 product-card d-flex flex-column">
+                        ${badgeHtml}
+                        <img src="${p.img}" class="card-img-top" alt="${p.title}" onerror="this.src='${getPlaceholder(p.title)}'">
+                        <div class="card-body d-flex flex-column border-top bg-light">
+                            <h5 class="card-title fw-bold text-truncate text-dark" title="${p.title}">${p.title}</h5>
+                            <div class="mb-4 mt-2 d-flex align-items-center">
+                                <span class="price-tag">${fmt(p.price)}</span>
+                                ${p.old ? `<span class="text-decoration-line-through text-muted ms-3 small">${fmt(p.old)}</span>` : ''}
+                            </div>
+                            <button class="btn btn-brand w-100 mt-auto view-btn shadow-sm"><i class="bi bi-eye me-2"></i> Quick View</button>
+                        </div>
+                    </div>
+                `;
+
+                div.querySelector('.view-btn').addEventListener('click', () => openModal(p));
+                grid.appendChild(div);
+            });
+        }
+
+        function openModal(p) {
+            document.getElementById('modalTitle').innerText = p.title;
+            document.getElementById('modalPrice').innerText = fmt(p.price);
+            
+            const mainImg = document.getElementById('modalMainImg');
+            const thumbsContainer = document.getElementById('modalThumbs');
+            thumbsContainer.innerHTML = '';
+
+            // Set main image
+            mainImg.src = p.imgs[0];
+
+            // Render all thumbnails with decorative styling
+            p.imgs.forEach(src => {
+                const wrapper = document.createElement('div');
+                wrapper.className = 'thumb-wrapper';
+                wrapper.style.width = '100px'; 
+                wrapper.innerHTML = `
+                    <img src="${src}" class="thumb-img" onerror="this.src='${getPlaceholder('Missing')}'">
+                    <div class="thumb-icon"><i class="bi bi-zoom-in"></i></div>
+                `;
+                
+                wrapper.onclick = function() {
+                    // Remove active state from all
+                    document.querySelectorAll('.thumb-wrapper').forEach(el => el.classList.remove('active'));
+                    // Add active state to clicked
+                    wrapper.classList.add('active');
+                    // Change main image
+                    mainImg.src = src;
+                };
+                
+                thumbsContainer.appendChild(wrapper);
+            });
+
+            // Make first thumb active by default
+            if(thumbsContainer.firstChild) {
+                thumbsContainer.firstChild.classList.add('active');
+            }
+
+            // Construct WhatsApp Order Message
+            const msg = encodeURIComponent(`Hello Global Printing,\n\nI am interested in purchasing:\n*Product:* ${p.title}\n*Price:* ${fmt(p.price)}\n\nPlease provide me with more details on customization and delivery.\n\nThank you.`);
+            document.getElementById('modalOrderBtn').href = `https://wa.me/${WHATSAPP_NUMBER}?text=${msg}`;
+
+            // Show Modal
+            const modal = new bootstrap.Modal(document.getElementById('productModal'));
+            modal.show();
+        }
+
+        // Initialize Products
+        renderProducts(PRODUCTS);
+
+        // Search Engine
+        document.getElementById('searchBtn').addEventListener('click', () => {
+            const q = document.getElementById('searchBox').value.toLowerCase();
+            const filtered = PRODUCTS.filter(p => p.title.toLowerCase().includes(q));
+            renderProducts(filtered);
+        });
+
+        // Trigger search on "Enter" key press
+        document.getElementById('searchBox').addEventListener('keyup', (e) => {
+            if(e.key === 'Enter') {
+                e.preventDefault();
+                document.getElementById('searchBtn').click();
+            }
+        });
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+	
+</body>
+</html>
