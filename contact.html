@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f9;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 380px;
+      margin: 40px auto;
+      padding: 20px;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0px 4px 12px rgba(0,0,0,0.1);
+    }
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #333;
+    }
+    .form-group {
+      margin-bottom: 15px;
+    }
+    label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 6px;
+    }
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 16px;
+    }
+    textarea {
+      resize: none;
+      height: 120px;
+    }
+    button {
+      width: 100%;
+      background: #28a745;
+      color: white;
+      padding: 12px;
+      font-size: 18px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+    button:hover {
+      background: #218838;
+    }
+    .contact-info {
+      margin-top: 30px;
+      padding: 20px;
+      background: #f9f9f9;
+      border-radius: 10px;
+    }
+    .contact-info h3 {
+      margin-bottom: 10px;
+      color: #444;
+    }
+    .whatsapp-btn {
+      display: inline-block;
+      margin-top: 10px;
+      background: #25d366;
+      color: white;
+      padding: 10px 16px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-size: 16px;
+    }
+    .whatsapp-btn:hover {
+      background: #20b954;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Contact Us</h2>
+    
+    <!-- Contact Form -->
+    <form action="mailto:your-email@example.com" method="post" enctype="text/plain">
+      <div class="form-group">
+        <label for="name">Your Name</label>
+        <input type="text" id="name" name="name" required placeholder="Enter your name">
+      </div>
+      
+      <div class="form-group">
+        <label for="email">Your Email</label>
+        <input type="email" id="email" name="email" required placeholder="Enter your email">
+      </div>
+      
+      <div class="form-group">
+        <label for="message">Your Message</label>
+        <textarea id="message" name="message" required placeholder="Write your message here..."></textarea>
+      </div>
+      
+      <button type="submit">Send Message</button>
+    </form>
+
+    <!-- Extra Contact Info -->
+    <div class="contact-info">
+      <h3>Other Ways to Reach Us</h3>
+      <p><strong>Email:</strong> gbl.2star@gmail.com</p>
+      <p><strong>Phone:</strong> +92 343 8236208 | +92 313 9781520</p>
+      <a class="whatsapp-btn" href="https://wa.me/923438236208" target="_blank">Chat on WhatsApp (03438236208)</a><br>
+      <a class="whatsapp-btn" href="https://wa.me/923139781520" target="_blank">Chat on WhatsApp (03139781520)</a>
+    </div>
+  </div>
+</body>
+</html>
